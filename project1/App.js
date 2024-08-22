@@ -17,7 +17,7 @@ function fruit(){
 }
 
 const App = () => {
-    let age= 27;
+    let age= 26;
     //Note: we cannot write any text inside View
     //eg) <View>Hiiiii</View> will give error
     return (

@@ -4,6 +4,7 @@ import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
 
 
 const InputText = ()=>{
+  
   const [name, setName]=useState('');
   return (
     <View>
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     borderWidth: 2, 
     borderColor: 'blue', 
     margin: 10,
-  }
-})
+  },
+});
 
 export default InputText;

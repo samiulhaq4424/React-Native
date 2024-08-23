@@ -1,6 +1,4 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable prettier/prettier */
+/* eslint-disable */
 
 import {Text, View, StyleSheet, FlatList} from 'react-native';
 

@@ -1,10 +1,4 @@
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable eslint-comments/no-unused-disable */
-/* eslint-disable eslint-comments/no-unused-disable */
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-unused-vars */
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-trailing-spaces */
+/* eslint-disable */
 
 import React from 'react';
 

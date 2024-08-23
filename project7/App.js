@@ -1,116 +1,73 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+/* eslint-disable */
 
 import React from 'react';
-import type {Node} from 'react';
+
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
   View,
+  Text,
+  StyleSheet,
+  ScrollView,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
-/* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
- * LTI update could not be added via codemod */
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+/**
+ *  1) Making dynamic Grid
+*/
+
+const users = [
+  { id: 1, name: 'Samiul' },
+  { id: 2, name: 'Peter' },
+  { id: 3, name: 'Bruce' },
+  { id: 4, name: 'Bill' },
+  { id: 5, name: 'Harry' },
+  { id: 6, name: 'Won' },
+  { id: 7, name: 'Hermione' },
+  { id: 8, name: 'Iron Man' },
+  { id: 9, name: 'Hulk' },
+  { id: 10, name: 'Spider Man' },
+  { id: 11, name: 'Captain America' },
+  { id: 12, name: 'Super Man' },
+  { id: 13, name: 'Bat Man' },
+  { id: 14, name: 'Tony' },
+  { id: 15, name: 'x' },
+  { id: 16, name: 'y' },
+  { id: 17, name: 'z' },
+  { id: 18, name: 'a' },
+  { id: 19, name: 'b' },
+  { id: 20, name: 'c' },
+];
+
+const App = () => {
+  
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View>
+      <Text style={{fontSize: 25}}>Grid with Dynamic Data</Text>
+
+      {/* making grid, see what happen if you remove flex property*/}
+      <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap'}}>
+        {
+            users.map(
+              (item) =>(
+                <Text key={item.id} style={styles.item}>{item.name}</Text>
+              ))
+        }
+      </View>
+      
     </View>
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  item : {
+    fontSize: 20,
+    backgroundColor: 'blue',
+    color: 'white',
+    margin: 5,
+    paddid: 5,
+    width: 120,
+    height: 120,
+    textAlignVertical: 'center',
+    textAlign: 'center',
   },
 });
 

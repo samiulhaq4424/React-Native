@@ -1,7 +1,5 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable */
+
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
 
 const users = [

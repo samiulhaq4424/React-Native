@@ -13,6 +13,7 @@ import {
 /**
  * 1) Making dynamic Grid (component: Grid) --> <Grid/> is commented, to see it's use uncomment it and comment <LoopFlatList/>
  * 2) Component in Loop with FlatList (component: <LoopFlatList/>)
+ * 3) Section List (component: <SectionListComponent/>)
 */
 import Grid from './components/Grid';
 import LoopFlatList from './components/LoopFlatList';
@@ -27,10 +28,9 @@ const App = () => {
       flex: 1 to the outermost View. This ensures that the entire layout takes up the available space, and the grid will be scrollable if needed. */
     <View style={{flex: 1}}>
 
-      {/* <Grid/>  */}
+      <Grid/> 
       {/* <LoopFlatList/> */}
-      
-      <SectionListComponent/>
+      {/* <SectionListComponent/> */}
 
     </View>
   );

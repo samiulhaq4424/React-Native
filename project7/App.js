@@ -6,8 +6,7 @@ import {
   View,
   Text,
   StyleSheet,
-  ScrollView,
-  FlatList,
+  SectionList,
 } from 'react-native';
 
 
@@ -17,6 +16,7 @@ import {
 */
 import Grid from './components/Grid';
 import LoopFlatList from './components/LoopFlatList';
+import SectionListComponent from './components/SectionListComponent';
 
 
 
@@ -28,15 +28,12 @@ const App = () => {
     <View style={{flex: 1}}>
 
       {/* <Grid/>  */}
-
-      <LoopFlatList/>
+      {/* <LoopFlatList/> */}
       
+      <SectionListComponent/>
 
     </View>
   );
 };
-
-
-
 
 export default App;

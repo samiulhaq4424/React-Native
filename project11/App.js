@@ -6,20 +6,27 @@ import {StyleSheet,Text, TouchableOpacity, View} from 'react-native';
 
 /**
  * 1) Style with Button (Note: default <Button> bhot jyada styles ko support nahi karta), so we have alternatives i.e. TouchableHighlight & TouchableOpacity (component: TouchHighLightComp)
- * 2) Radio Button (in React-Native: radio-button nai hota using import)
+ * 2) Static Radio Button (in React-Native: radio-button nai hota using import) (component: RadioButton)
+ * 3) Dynamic Radio Button (component: DynamicRadioButton)
 */
 
 import TouchHighLightComp from './components/TouchHighLightComp';
 import RadioButton from './components/RadioButton';
+import DynamicRadioButton from './components/DynamicRadioButton';
 
 const App = () => {
   
+ 
+
+
   return (
     <View style={styles.main}>
       
       {/* <TouchHighLightComp/> */}
 
-      <RadioButton/>
+      {/* <RadioButton/> */}
+
+      {/* <DynamicRadioButton/> */}
 
     </View>
   );
@@ -29,7 +36,7 @@ const styles = StyleSheet.create({
 
   main:{
     flex: 1,
-    alignItems: 'center', //centers the content horizontally (along the cross-axis)
+    alignItems: 'center', //centers the content horizontally (along the cross-axis)  //using this buttons are not aligned in a staright vertical line
     justifyContent: 'center', //centers the content vertically (along the main axis)
   },
 
@@ -52,6 +59,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
+    
   },
 
   radioText:{
@@ -62,7 +70,7 @@ const styles = StyleSheet.create({
 
   radioBgc:{
     //for inner radio button define this
-    backgroundColor: 'skyblue',
+    backgroundColor: 'green',
     height: 30,
     width: 30,
     borderRadius: 18,

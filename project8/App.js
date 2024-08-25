@@ -37,7 +37,7 @@ class App extends Component{
     return (
       <View>
         <Text style={{fontSize: 25, color: 'purple'}}>Class Component</Text>
-        <TextInput placeholder='Enter your name' />
+        <TextInput style={styles.textInput} placeholder='Enter your name' />
         {/* to pass the method reference, we are using this.fruit ; 
             use onPress={() => this.fruit()} if you need to perform additional logic or pass arguments. */}
         <Button title='Press Me' onPress={this.fruit}/> 

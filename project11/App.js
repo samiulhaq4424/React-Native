@@ -1,7 +1,8 @@
 /* eslint-disable */
 
 import React from 'react';
-import {StyleSheet,Text, TouchableHighlight, View} from 'react-native';
+import { useState } from 'react';
+import {StyleSheet,Text, TouchableOpacity, View} from 'react-native';
 
 /**
  * 1) Style with Button (Note: default <Button> bhot jyada styles ko support nahi karta), so we have alternatives i.e. TouchableHighlight & TouchableOpacity (component: TouchHighLightComp)
@@ -9,6 +10,7 @@ import {StyleSheet,Text, TouchableHighlight, View} from 'react-native';
 */
 
 import TouchHighLightComp from './components/TouchHighLightComp';
+import RadioButton from './components/RadioButton';
 
 const App = () => {
   
@@ -17,7 +19,7 @@ const App = () => {
       
       {/* <TouchHighLightComp/> */}
 
-      {/* for radio button use TouchableOpacity as isme kaam less krna hoga and not TouchableHighlight as isme jyada kaam karna parega */}
+      <RadioButton/>
 
     </View>
   );
@@ -25,62 +27,46 @@ const App = () => {
 
 const styles = StyleSheet.create({
 
-
-
-
-
-
-
-
-
-
   main:{
     flex: 1,
+    alignItems: 'center', //centers the content horizontally (along the cross-axis)
+    justifyContent: 'center', //centers the content vertically (along the main axis)
   },
-  button:{
-    backgroundColor: 'grey',
-    color: 'white',
-    fontSize: 22,
-    textAlign: 'center',
-    padding: 10,
+
+  text:{
+    fontSize:30, 
+    color: 'green', 
+    textAlign: 'center', 
+    marginBottom: 50,
+  },
+
+  radio:{
+    height: 40,
+    width: 40,
+    borderColor: 'blue',
+    borderWidth: 2,
+    borderRadius: 20, //for circle half of width
     margin: 10,
-    borderRadius: 30,
-    //for shadow around the button, we use elevation in android, and for shadow color use shadowColor
-    shadowColor: 'red',
-    elevation: 15, // Shadow for Android
-    shadowOpacity: 0.8, //defines how transparent or opaque the shadow will be, with values ranging from 0 (completely transparent) to 1 (completely opaque).
   },
 
-  success:{
-    backgroundColor: 'green',
+  wrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 
-  primary:{
-    backgroundColor: 'blue',
+  radioText:{
+    fontSize: 20,
+    fontWeight: '800',
+    color: 'orange'
   },
 
-  warning:{
-    backgroundColor: 'gold',
-  },
-
-  error:{
-    backgroundColor: 'red',
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  radioBgc:{
+    //for inner radio button define this
+    backgroundColor: 'skyblue',
+    height: 30,
+    width: 30,
+    borderRadius: 18,
+    margin: 3 // adjust to put the circle in the center; manually karna hoga
   },
 });
 

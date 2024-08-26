@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { useState } from 'react';
-import {StyleSheet,Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, View, Pressable} from 'react-native';
+
 
 /**
  * 1) Style with Button (Note: default <Button> bhot jyada styles ko support nahi karta), so we have alternatives i.e. TouchableHighlight & TouchableOpacity (component: TouchHighLightComp)
@@ -10,6 +11,8 @@ import {StyleSheet,Text, TouchableOpacity, View} from 'react-native';
  * 3) Dynamic Radio Button (component: DynamicRadioButton)
  * 4) Activity Indicator (Loader) (component: ActivityIndic)
  * 5) Modal in React-Native (component: ModalComp)
+ * 6) Pressable in React-Native (component: PressableComp)
+ * 7) Status Bar in React-Native (component: )
 */
 
 import TouchHighLightComp from './components/TouchHighLightComp';
@@ -17,19 +20,17 @@ import RadioButton from './components/RadioButton';
 import DynamicRadioButton from './components/DynamicRadioButton';
 import ActivityIndic from './components/ActivityIndic';
 import ModalComp from './components/ModalComp';
-
-
+import PressableComp from './components/PressableComp'
 
 
 const App = () => {
   
- 
-
+  
 
   return (
     <View style={styles.main}>
       
-      <TouchHighLightComp/>
+      {/* <TouchHighLightComp/> */}
 
       {/* <RadioButton/> */}
 
@@ -39,20 +40,38 @@ const App = () => {
 
       {/* <ModalComp/> */}
 
+      <PressableComp/>
+
+
+
+
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
 
   main:{
     flex: 1,
-    alignItems: 'center', //centers the content horizontally (along the cross-axis)  //using this buttons are not aligned in a staright vertical line
-    justifyContent: 'center', //centers the content vertically (along the main axis)
+    // alignItems: 'center', 
+    justifyContent: 'center', 
+  },
+
+  pressableBtn: {
+    color: '#fff', //white and #000 is balck
+    padding: 10,
+    margin: 10,
+    borderRadius: 10,
+    fontSize: 20,
+    textAlign: 'center',
+
+    shadowColor: 'red',
+    elevation: 15,
   },
 
   text:{
-    fontSize:30, 
+    fontSize: 30, 
     color: 'green', 
     textAlign: 'center', 
     marginBottom: 50,
@@ -76,7 +95,7 @@ const styles = StyleSheet.create({
   radioText:{
     fontSize: 20,
     fontWeight: '800',
-    color: 'orange'
+    color: 'orange',
   },
 
   radioBgc:{
@@ -85,7 +104,7 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 18,
-    margin: 3 // adjust to put the circle in the center; manually karna hoga
+    margin: 3, // adjust to put the circle in the center; manually karna hoga
   },
 });
 

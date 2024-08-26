@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React from 'react';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -9,36 +10,45 @@ import {
   Text,
   useColorScheme,
   View,
+  Platform
 } from 'react-native';
 
+/**
+ *  1) To check Platform(android/ios) and react-native version
+*/
 
-
+import PlatformCheck from './components/PlatformCheck'
 
 const App = () => {
   
   return (
     <View>
-      <Text>Hiiii</Text>
+      
+      <PlatformCheck/>
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+
+  text: {
+    fontSize:22, 
+    color: 'green', 
+    marginBottom: 40,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+
+  check1: {
+    color: Platform.OS === 'android' ? 'orange' : 'blue',
+    fontSize: 30,
+    marginBottom: 50,
+    marginTop: 50,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+
+  check2: {
+    fontSize: 18, 
+    borderTopWidth: 2, 
+    marginBottom: 8,
   },
 });
 

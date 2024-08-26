@@ -1,8 +1,7 @@
 /* eslint-disable */
 
 import React from 'react';
-import { useState } from 'react';
-import {StyleSheet, Text, View, Button, StatusBar} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 
 /**
@@ -26,8 +25,6 @@ import StatusBarComp from './components/StatusBarComp';
 
 const App = () => {
   
-  
-
   return (
     <View style={styles.main}>
       
@@ -44,9 +41,6 @@ const App = () => {
       {/* <PressableComp/> */}
 
       <StatusBarComp/>
-      
-
-
 
     </View>
   );
@@ -57,57 +51,7 @@ const styles = StyleSheet.create({
 
   main:{
     flex: 1,
-    // alignItems: 'center', 
     justifyContent: 'center', 
-  },
-
-  pressableBtn: {
-    color: '#fff', //white and #000 is balck
-    padding: 10,
-    margin: 10,
-    borderRadius: 10,
-    fontSize: 20,
-    textAlign: 'center',
-
-    shadowColor: 'red',
-    elevation: 15,
-  },
-
-  text:{
-    fontSize: 30, 
-    color: 'green', 
-    textAlign: 'center', 
-    marginBottom: 50,
-  },
-
-  radio:{
-    height: 40,
-    width: 40,
-    borderColor: 'blue',
-    borderWidth: 2,
-    borderRadius: 20, //for circle half of width
-    margin: 10,
-  },
-
-  wrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    
-  },
-
-  radioText:{
-    fontSize: 20,
-    fontWeight: '800',
-    color: 'orange',
-  },
-
-  radioBgc:{
-    //for inner radio button define this
-    backgroundColor: 'green',
-    height: 30,
-    width: 30,
-    borderRadius: 18,
-    margin: 3, // adjust to put the circle in the center; manually karna hoga
   },
 });
 

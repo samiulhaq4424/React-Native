@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useState } from 'react';
-import {StyleSheet, Text, View, Pressable} from 'react-native';
+import {StyleSheet, Text, View, Button, StatusBar} from 'react-native';
 
 
 /**
@@ -12,7 +12,7 @@ import {StyleSheet, Text, View, Pressable} from 'react-native';
  * 4) Activity Indicator (Loader) (component: ActivityIndic)
  * 5) Modal in React-Native (component: ModalComp)
  * 6) Pressable in React-Native (component: PressableComp)
- * 7) Status Bar in React-Native (component: )
+ * 7) Status Bar in React-Native (component: statusBarComp)
 */
 
 import TouchHighLightComp from './components/TouchHighLightComp';
@@ -20,7 +20,8 @@ import RadioButton from './components/RadioButton';
 import DynamicRadioButton from './components/DynamicRadioButton';
 import ActivityIndic from './components/ActivityIndic';
 import ModalComp from './components/ModalComp';
-import PressableComp from './components/PressableComp'
+import PressableComp from './components/PressableComp';
+import StatusBarComp from './components/StatusBarComp';
 
 
 const App = () => {
@@ -40,8 +41,10 @@ const App = () => {
 
       {/* <ModalComp/> */}
 
-      <PressableComp/>
+      {/* <PressableComp/> */}
 
+      <StatusBarComp/>
+      
 
 
 

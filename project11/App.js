@@ -8,11 +8,18 @@ import {StyleSheet,Text, TouchableOpacity, View} from 'react-native';
  * 1) Style with Button (Note: default <Button> bhot jyada styles ko support nahi karta), so we have alternatives i.e. TouchableHighlight & TouchableOpacity (component: TouchHighLightComp)
  * 2) Static Radio Button (in React-Native: radio-button nai hota using import) (component: RadioButton)
  * 3) Dynamic Radio Button (component: DynamicRadioButton)
+ * 4) Activity Indicator (Loader) (component: ActivityIndic)
+ * 5) Modal in React-Native (component: ModalComp)
 */
 
 import TouchHighLightComp from './components/TouchHighLightComp';
 import RadioButton from './components/RadioButton';
 import DynamicRadioButton from './components/DynamicRadioButton';
+import ActivityIndic from './components/ActivityIndic';
+import ModalComp from './components/ModalComp';
+
+
+
 
 const App = () => {
   
@@ -22,11 +29,15 @@ const App = () => {
   return (
     <View style={styles.main}>
       
-      {/* <TouchHighLightComp/> */}
+      <TouchHighLightComp/>
 
       {/* <RadioButton/> */}
 
       {/* <DynamicRadioButton/> */}
+
+      {/* <ActivityIndic/> */}
+
+      {/* <ModalComp/> */}
 
     </View>
   );

@@ -2,36 +2,36 @@
 
 import React from 'react';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Platform
-} from 'react-native';
+import {StyleSheet, Text, View, Platform} from 'react-native';
+
 
 /**
  *  1) To check Platform(android/ios) and react-native version
+ *  2) Install NPM package for Web View in React-Native
 */
 
-import PlatformCheck from './components/PlatformCheck'
+import PlatformCheck from './components/PlatformCheck';
+import InstallPackage from './components/InstallPackage';
 
 const App = () => {
   
+
   return (
-    <View>
+    <View style={styles.main}>
       
-      <PlatformCheck/>
+      {/* <PlatformCheck/> */}
+
+      <InstallPackage/>
 
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-
+  main: {
+    flex: 1, // Makes the container fill the screen
+  },
+  
   text: {
     fontSize:22, 
     color: 'green', 

@@ -12,6 +12,7 @@ import {StyleSheet, View} from 'react-native';
  * 5) Modal in React-Native (component: ModalComp)
  * 6) Pressable in React-Native (component: PressableComp)
  * 7) Status Bar in React-Native (component: statusBarComp)
+ * 8) Custom Modal(Pop-Up) without importing from React-Native (component: CustomModal)
 */
 
 import TouchHighLightComp from './components/TouchHighLightComp';
@@ -21,13 +22,13 @@ import ActivityIndic from './components/ActivityIndic';
 import ModalComp from './components/ModalComp';
 import PressableComp from './components/PressableComp';
 import StatusBarComp from './components/StatusBarComp';
+import CustomModal from './components/CustomModal';
 
 
 const App = () => {
-  
+
   return (
     <View style={styles.main}>
-      
       {/* <TouchHighLightComp/> */}
 
       {/* <RadioButton/> */}
@@ -40,7 +41,9 @@ const App = () => {
 
       {/* <PressableComp/> */}
 
-      <StatusBarComp/>
+      {/* <StatusBarComp/> */}
+
+      <CustomModal/>
 
     </View>
   );

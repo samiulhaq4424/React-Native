@@ -23,7 +23,7 @@ const ApiCall = () => {
     const dataObjFetched = await result.json(); // Parse the result as JSON i.e  resolving to a JavaScript object (or array) representing the JSON data.
 
     // console.warn(dataObjFetched);
-    setData(dataObjFetched)
+    setData(dataObjFetched);
 
 
   }
@@ -39,7 +39,7 @@ const ApiCall = () => {
 
   return (
     <View>
-      <Text style={{fontSize: 30, textAlign: 'center'}} >API Call</Text>
+      <Text style={{fontSize: 30, textAlign: 'center', marginBottom: 20}} >API Call</Text>
       {
          data ? 
          <View>

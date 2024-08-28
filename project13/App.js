@@ -12,13 +12,18 @@ import React from 'react';
 
 
 import StackNav from './components/StackNav';
+import StackNavStyle from './components/StackNavStyle';
 
 
 function App() {
 
   return (
   
-    <StackNav/>
+    // <StackNav/>
+
+    <StackNavStyle/>
+
+
 
   );
 }

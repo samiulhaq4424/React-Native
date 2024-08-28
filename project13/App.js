@@ -1,45 +1,27 @@
 /* eslint-disable */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
 
+/**
+ * 1) Stack Navigation (component: StackNav)
+ * 2) Stack Navigation Style(component: StackComp1)
+ * 3) To add Buttons, TextInput, etc which are components in Stack Navigation (component: ComponentsStackNav)
+ * 5) Pass data between Screens in Stack Navigation (component: PassDataStackNav)
+*/
 
 
-const App = () => {
-  
+import StackNav from './components/StackNav';
+
+
+function App() {
+
   return (
-    <View>
-      <Text>Hiiii</Text>
-    </View>
-  );
-};
+  
+    <StackNav/>
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+  );
+}
 
 export default App;
+

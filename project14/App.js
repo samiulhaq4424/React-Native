@@ -9,13 +9,16 @@ import React from 'react';
  */
 
 import BottomTabNavigation from './components/BottomTabNavigation';
+import TopTabNavigation from './components/TopTabNavigation';
 
 
 function App() {
 
   return (
   
-    <BottomTabNavigation/>
+    // <BottomTabNavigation/>
+
+    <TopTabNavigation/>
 
   );
 }

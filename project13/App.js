@@ -14,6 +14,7 @@ import React from 'react';
 import StackNav from './components/StackNav';
 import StackNavStyle from './components/StackNavStyle';
 import ComponentsStackNav from './components/ComponentsStackNav';
+import PassDataStackNav from './components/PassDataStackNav';
 
 
 function App() {
@@ -24,9 +25,9 @@ function App() {
 
     // <StackNavStyle/>
 
-    <ComponentsStackNav/>
+    // <ComponentsStackNav/>
 
-
+    <PassDataStackNav/>
 
   );
 }

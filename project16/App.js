@@ -4,12 +4,9 @@ import React, { useState } from 'react';
 import {useEffect} from 'react';
 
 import {
-  SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
 } from 'react-native';
 
@@ -38,7 +35,7 @@ const App = () => {
 
   
   return (
-    <View>
+    <ScrollView>
       <Text style={{fontSize:25, color: 'green', textAlign: 'center', marginBottom: 30}} >JSON server Api integration</Text>
 
       {
@@ -52,7 +49,7 @@ const App = () => {
         : ''
       }
 
-    </View>
+    </ScrollView>
   );
 };
 
@@ -64,24 +61,6 @@ const styles = StyleSheet.create({
   },
   view: {
     borderWidth: 1
-  },
-
-
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });
 

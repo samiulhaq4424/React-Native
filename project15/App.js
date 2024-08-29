@@ -1,11 +1,8 @@
 /* eslint-disable */
 
-
 // https://jsonplaceholder.typicode.com/
 
 import React from 'react';
-
-import { useEffect, useState } from 'react';
 
 import {
   View,
@@ -38,6 +35,4 @@ const App = () => {
   );
 };
 
-
 export default App;
-

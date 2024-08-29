@@ -43,8 +43,12 @@ const App = () => {
 
       {
         data.length !==0 ?
-          data.map((item) =>
-          (<View><Text style={styles.text} >{item.name}</Text></View>))
+          data.map((item) => (
+           <View style={styles.view}>
+            <Text style={styles.text} >Name: {item.name}</Text>
+            <Text style={styles.text} >Age: {item.age}</Text>
+            <Text style={styles.text} >Email: {item.email}</Text>
+           </View>))
         : ''
       }
 
@@ -57,6 +61,9 @@ const styles = StyleSheet.create({
   text: {
     fontSize:20, 
     marginBottom: 20,
+  },
+  view: {
+    borderWidth: 1
   },
 
 

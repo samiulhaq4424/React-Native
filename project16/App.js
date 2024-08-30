@@ -14,6 +14,7 @@ import {
  * 5) Make List from API data (component: ListApi)
  * 6) Delete API data (component: DeleteApi)
  * 7) Pass data to Modal for Updating API (component: UpdateAPI)
+ * 8) Integrate API with PUT method (component: IntegrateApi_PUTmethod)
 */
 
 import ApiIntegrate from './components/ApiIntegrate';
@@ -23,6 +24,7 @@ import FormValidation from './components/FormValidation';
 import ListApi from './components/ListApi';
 import DeleteApi from './components/DeleteApi';
 import UpdateAPI from './components/UpdateAPI';
+import IntegrateApi_PUTmethod from './components/IntegrateApi_PUTmethod';
 
 const App = () => {
   
@@ -41,7 +43,9 @@ const App = () => {
 
       {/* <DeleteApi/> */}
 
-      <UpdateAPI/>
+      {/* <UpdateAPI/> */}
+
+      <IntegrateApi_PUTmethod/>
 
     </View>
   );

@@ -1,4 +1,5 @@
 
+
 import { useEffect, useState } from 'react';
 
 import {
@@ -10,7 +11,7 @@ import {
 } from 'react-native';
 
 
-const ListApi = () => {
+const DeleteApi = () => {
   const [data, setData] = useState([]); //array of objects
 
   const getApiData = async () =>{
@@ -24,11 +25,30 @@ const ListApi = () => {
     }
   }
 
+  /*
+    url: http://10.0.2.2:3000/users
+    id: 5 (say)
+    therefore,
+   `${url}/${id}` ---> http://10.0.2.2:3000/users/5
+  */
+  const deleteUser = async (id) =>{
+    const url = 'http://10.0.2.2:3000/users';
+
+    console.error(`${url}/${id}`); //just to see
+    const result = await fetch(`${url}/${id}`, {
+      method: 'DELETE'
+    }); 
+    const dataFetched = await result.json();
+    if(dataFetched){ //or can use 'result' in condition
+      console.warn(`UserId: ${id} Deleted !!!!!`);
+    }
+    getApiData(); //to refresh on the screen, so re-render will occur again
+  }
+
   useEffect(()=>{
-    getApiData(); //to call the function
+    getApiData(); //to call the getApiData function
   },[]);
 
-  //NOTE: here only UI is deign, button will not work 
   return (
     <ScrollView style={{flex:1}}>
 
@@ -45,10 +65,11 @@ const ListApi = () => {
             <View style={{ flex: 2 }}><Text>{item.name}</Text></View>
             <View style={{ flex: 1 }}><Text>{item.age}</Text></View>
             <View style={styles.buttonContainer}>
-              <Button title='delete' onPress={() => handleDelete(item.id)} />
+              {/* passing id so we can delete that particular person's object */}
+              <Button title='delete' onPress={()=>deleteUser(item.id)} />
             </View>
             <View style={styles.buttonContainer}>
-              <Button title='update' onPress={() => handleUpdate(item.id)} />
+              <Button title='update' />
             </View>
           </View>
         ))
@@ -58,6 +79,7 @@ const ListApi = () => {
     </ScrollView>
   );
 };
+
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -75,5 +97,5 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ListApi;
+export default DeleteApi;
 

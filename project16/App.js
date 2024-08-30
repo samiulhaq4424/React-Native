@@ -15,6 +15,7 @@ import {
  * 6) Delete API data (component: DeleteApi)
  * 7) Pass data to Modal for Updating API (component: UpdateAPI)
  * 8) Integrate API with PUT method (component: IntegrateApi_PUTmethod)
+ * 9) Search with API (component: SearchApi)
 */
 
 import ApiIntegrate from './components/ApiIntegrate';
@@ -25,6 +26,7 @@ import ListApi from './components/ListApi';
 import DeleteApi from './components/DeleteApi';
 import UpdateAPI from './components/UpdateAPI';
 import IntegrateApi_PUTmethod from './components/IntegrateApi_PUTmethod';
+import SearchApi from './components/SearchApi';
 
 const App = () => {
   
@@ -45,7 +47,9 @@ const App = () => {
 
       {/* <UpdateAPI/> */}
 
-      <IntegrateApi_PUTmethod/>
+      {/* <IntegrateApi_PUTmethod/> */}
+      
+      <SearchApi/>
 
     </View>
   );

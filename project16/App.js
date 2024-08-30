@@ -13,6 +13,7 @@ import {
  * 4) Simple Form Validation (component: FormValidation) 
  * 5) Make List from API data (component: ListApi)
  * 6) Delete API data (component: DeleteApi)
+ * 7) Pass data to Modal for Updating API (component: UpdateAPI)
 */
 
 import ApiIntegrate from './components/ApiIntegrate';
@@ -21,9 +22,10 @@ import PostApiInputField from './components/PostApiInputField';
 import FormValidation from './components/FormValidation';
 import ListApi from './components/ListApi';
 import DeleteApi from './components/DeleteApi';
+import UpdateAPI from './components/UpdateAPI';
 
 const App = () => {
-
+  
   return (
     <View style={{flex:1}}>
       
@@ -37,7 +39,9 @@ const App = () => {
       
       {/* <ListApi/> */}
 
-      <DeleteApi/>
+      {/* <DeleteApi/> */}
+
+      <UpdateAPI/>
 
     </View>
   );

@@ -33,7 +33,7 @@ const ApiIntegrate = () => {
   
   return (
     <ScrollView>
-      <Text style={{fontSize:25, color: 'green', textAlign: 'center', marginBottom: 30}} >JSON server Api integration</Text>
+      <Text style={{fontSize:25, color: 'green', textAlign: 'center', marginBottom: 30}}>JSON server API integration</Text>
 
       { //give key to each <View>
         data.length !==0 ?

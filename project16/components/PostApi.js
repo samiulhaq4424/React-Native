@@ -31,7 +31,7 @@ const PostApi = () => {
   return (
     <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
       
-      <Text style={{fontSize:25, color: 'green', textAlign: 'center', marginBottom: 30}} >Simple Post Api</Text>
+      <Text style={{fontSize:25, color: 'green', textAlign: 'center', marginBottom: 30}}>Simple Post API (Static Data)</Text>
       
       <Button title='Save Data' onPress={saveApidata}/>
 

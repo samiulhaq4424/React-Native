@@ -121,9 +121,11 @@ const UpdateModal = ({selectedUser, setShowModal, getApiData})=>{ //component
     if(dataFetched){
       console.warn(dataFetched);
       getApiData(); //calling again to see the effect on the screen
+      //to empty the TextInput field
       setName('');
       setAge('');
       setEmail('');
+      
       setShowModal(false);
     }
   }

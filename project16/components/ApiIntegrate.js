@@ -21,7 +21,7 @@ const ApiIntegrate = () => {
     const url = 'http://10.0.2.2:3000/users';
     const result = await fetch(url);
     const dataObjFetched = await result.json();
-    // console.error(dataObjFetched);
+    // console.error(dataObjFetched); //just to check
     setData(dataObjFetched);
   }
 

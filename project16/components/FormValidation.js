@@ -56,6 +56,7 @@ const FormValidation = () => {
     if(result){
       console.warn('Data added');
     }
+    //to empty the TextInput field
     setName('');
     setAge('');
     setEmail('');

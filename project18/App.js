@@ -1,7 +1,6 @@
 /* eslint-disable */
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 
 import ProductWrapper from './components/ProductWrapper';
 

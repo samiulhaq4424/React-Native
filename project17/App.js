@@ -1,44 +1,33 @@
 /* eslint-disable */
 
 import React from 'react';
+
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
   View,
+  StyleSheet,
 } from 'react-native';
+import Ref from './components/Ref';
 
 
+/**
+ * 1) Using Ref using useRef() (component: Ref)
+*/
 
 
 const App = () => {
+
+  
   
   return (
-    <View>
-      <Text>Hiiii</Text>
+    <View style={styles.conatainer}>
+      <Ref/>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  conatainer: {
+    flex: 1,
   },
 });
 

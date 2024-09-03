@@ -43,40 +43,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: 'blue',
   },
-
-
-
-
-
-
-
-
-
-
-
-  container: {
-    flex:1,
-  },
-  wrapper: {
-    flex:1,
-  },
-  input: {
-    borderColor: 'skyblue',
-    borderWidth: 1,
-    margin: 10,
-    marginBottom: 5,
-    height: 40,
-    width: 350,
-  },
-  text: {
-    fontSize: 22,  
-    fontWeight: '600',
-  },
-  errorText: {
-    fontSize: 15, 
-    color: 'red', 
-    marginLeft: 10,
-  },
 })
 
 export default Header;

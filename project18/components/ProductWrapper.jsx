@@ -7,7 +7,7 @@ import Header from './Header';
 import Product from './Product';
 
 
-function ProductWrapper({navigation}) {
+function ProductWrapper({navigation}) { //navigation is passed by container only
   // Test with this simple image link
   const imageLink = 'https://static.vecteezy.com/system/resources/previews/011/047/526/original/smartphone-and-mobile-phone-free-png.png'; 
 

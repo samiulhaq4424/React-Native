@@ -12,8 +12,14 @@ import {
 
 
 const Ref = () => {
-
-  const input = useRef();
+  /** Below:
+   * 1) input is an object with a current property.
+   * 2) The current property i.e. 'input.current' is initially set to 'undefined' unless you pass an initial value to useRef.
+   
+          eg) const input = useRef(); // { current: undefined }
+          eg) const input = useRef(null); // { current: null }
+  */
+  const input = useRef(null);
 
   const updateInput = () => {
     /**
@@ -45,7 +51,7 @@ const Ref = () => {
         style={styles.input}
         placeholder='Enter Your Password'
       />
-      
+
       <View style={{flex:1, alignItems: 'center'}}>
         <Button title='Update Input' onPress={updateInput} />
       </View>

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { useEffect, useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 import { useSelector } from 'react-redux'; // allows us to extract any data from the Redux store, depending on what our component needs to render or calculate.
 

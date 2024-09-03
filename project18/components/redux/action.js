@@ -1,25 +1,19 @@
 /* eslint-disable */
 
 
-import { ADD_TO_CART, REMOVE_FROM_CART, USER_LIST } from "./constants";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "./constants";
 
 
 export function addToCart(item){
   return {
     type: ADD_TO_CART,
     payload: item
-  }
+  };
 }
 
-export function removeFromCart(item){
+export function removeFromCart(itemID){
   return {
     type: REMOVE_FROM_CART,
-    payload: item
-  }
-}
-
-export function getUserList(){
-  return {
-    type: USER_LIST,
-  }
+    payload: itemID
+  };
 }

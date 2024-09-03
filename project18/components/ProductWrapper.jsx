@@ -1,13 +1,13 @@
 /* eslint-disable */
 
-import { View, ScrollView, Button } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 
 import Header from './Header';
 import Product from './Product';
 
 
-function ProductWrapper({navigation}) { //navigation is passed by container only
+function ProductWrapper() { //navigation is passed by container only
   // Test with this simple image link
   const imageLink = 'https://static.vecteezy.com/system/resources/previews/011/047/526/original/smartphone-and-mobile-phone-free-png.png'; 
 
@@ -26,7 +26,6 @@ function ProductWrapper({navigation}) { //navigation is passed by container only
 
   return (
     <View style={{ flex: 1}}>
-      <Button title='Go to User List' onPress={()=>navigation.navigate('Users')} />
       <Header />
       <ScrollView>
         {

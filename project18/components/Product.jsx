@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 
-import { View, Text, TextInput, StyleSheet, Button, Image, ScrollView } from 'react-native';
+import { View, Text, Button, Image } from 'react-native';
 
 
 import { useDispatch, useSelector } from 'react-redux'; //using react-redux
@@ -54,42 +54,6 @@ const Product = ({item}) => {
   );
 }
 
-
-const styles = StyleSheet.create({
-
-
-
-
-
-
-
-
-
-
-  container: {
-    flex:1,
-  },
-  wrapper: {
-    flex:1,
-  },
-  input: {
-    borderColor: 'skyblue',
-    borderWidth: 1,
-    margin: 10,
-    marginBottom: 5,
-    height: 40,
-    width: 350,
-  },
-  text: {
-    fontSize: 22,  
-    fontWeight: '600',
-  },
-  errorText: {
-    fontSize: 15, 
-    color: 'red', 
-    marginLeft: 10,
-  },
-})
-
 export default Product;
+
 

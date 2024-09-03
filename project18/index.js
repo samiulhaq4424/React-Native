@@ -16,7 +16,7 @@ const AppRedux = ()=> (
   <Provider store={store}>
     <App/>
   </Provider>
-)
+);
 
 AppRegistry.registerComponent(appName, () => AppRedux);
 // AppRegistry.registerComponent(appName, () => App);

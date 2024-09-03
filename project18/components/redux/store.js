@@ -11,7 +11,8 @@ import SagaData from "./SagaData";//saga
 
 const store = configureStore({ //way to write store
   reducer: rootReducer, // Use the `reducer` key here
-  middleware: ()=>[sagaMiddleware], // Mount saga on the store
+  middleware: ()=>[sagaMiddleware], // Mount saga on the store and use the 'middleware' key
+  // middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(), sagaMiddleware],
 });
 
 sagaMiddleware.run(SagaData);// Then run the saga
